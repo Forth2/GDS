@@ -4,7 +4,10 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import bawei.com.gds_project.R
+import bawei.com.gds_project.fragment.FragmentFind
+import bawei.com.gds_project.fragment.FragmentHot
 import bawei.com.gds_project.fragment.FragmentIndex
+import bawei.com.gds_project.fragment.FragmentMine
 import com.hjm.bottomtabbar.BottomTabBar
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 .addTabItem("首页",R.mipmap.home_selected,R.mipmap.home_normal, FragmentIndex::class.java)
                 .addTabItem("发现",R.mipmap.find_selected,R.mipmap.find_normal, FragmentFind::class.java)
                 .addTabItem("热门",R.mipmap.hot_selected,R.mipmap.hot_normal, FragmentHot::class.java)
-                .addTabItem("我的",R.mipmap.mine_selected, R.mipmap.mine_normal,FragmentMine::class.java)
+                .addTabItem("我的",R.mipmap.mine_selected, R.mipmap.mine_normal, FragmentMine::class.java)
 
     }
 }
