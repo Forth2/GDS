@@ -4,10 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import bawei.com.gds_project.R
-import bawei.com.gds_project.fragment.FragmentFind
-import bawei.com.gds_project.fragment.FragmentHot
 import bawei.com.gds_project.fragment.FragmentIndex
-import bawei.com.gds_project.fragment.FragmentMine
 import com.hjm.bottomtabbar.BottomTabBar
 
 class MainActivity : AppCompatActivity() {
