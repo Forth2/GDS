@@ -9,9 +9,9 @@
     tools:context=".acticity.ClockActivity">
 
     <bawei.com.gds_project.utils.ClockView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_width="@dimen/dp234"
+        android:layout_height="@dimen/dp234"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp120"/>
 
 </RelativeLayout>
