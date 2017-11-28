@@ -12,8 +12,6 @@
             android:layout_marginRight="@dimen/dp10"
             android:drawableRight="@mipmap/icon_setting"
             android:layout_height="@dimen/dp40" />
-
-
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/mine_fresco"
         android:layout_width="@dimen/dp60"
