@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+//快捷的findviewfindid操作，建议加上
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
@@ -30,7 +32,8 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //高版本的依赖才能看到多外拦截器
     // 其他依赖
-    
+
+    //沉浸式依赖
 
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -49,13 +52,9 @@ dependencies {
     compile 'com.shuyu:GSYVideoPlayer:1.6.8'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.github.bumptech.glide:glide:3.5.2'
-<<<<<<< HEAD
     compile 'com.google.code.gson:gson:2.8.0'
-    testCompile 'junit:junit:4.12'
-=======
-    //沉浸式依赖
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
->>>>>>> ba802ff7557e26180b0a3db51320cd6dd0d2b649
+    testCompile 'junit:junit:4.12'
 }
 repositories {
     mavenCentral()
