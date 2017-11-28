@@ -13,6 +13,7 @@ import bawei.com.gds_project.R
 /**
  * Created by 999 on 2017/11/27.
  */
+
 class FragmentHot : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -23,7 +24,6 @@ class FragmentHot : Fragment(){
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
     }
 }

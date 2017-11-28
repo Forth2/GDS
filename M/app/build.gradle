@@ -53,6 +53,10 @@ dependencies {
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.github.bumptech.glide:glide:3.5.2'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49eea557b1591f735fc262413c6443b05ade2b56
 
     compile 'com.google.code.gson:gson:2.8.0'
     testCompile 'junit:junit:4.12'
@@ -60,11 +64,19 @@ dependencies {
     //沉浸式依赖
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
 
+<<<<<<< HEAD
 =======
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
     testCompile 'junit:junit:4.12'
 >>>>>>> 2df19de8b5337f6181d825e99ef334baddf8ad47
+=======
+
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.gyf.barlibrary:barlibrary:2.2.9'
+    testCompile 'junit:junit:4.12'
+
+>>>>>>> 49eea557b1591f735fc262413c6443b05ade2b56
 }
 repositories {
     mavenCentral()
