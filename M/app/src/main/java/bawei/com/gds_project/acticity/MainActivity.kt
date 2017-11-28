@@ -2,15 +2,15 @@ package bawei.com.gds_project.acticity
 
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import bawei.com.gds_project.R
 import bawei.com.gds_project.fragment.FragmentFind
 import bawei.com.gds_project.fragment.FragmentHot
 import bawei.com.gds_project.fragment.FragmentIndex
 import bawei.com.gds_project.fragment.FragmentMine
+import bawei.com.gds_project.utils.BaseActivity2
 import com.hjm.bottomtabbar.BottomTabBar
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity2() {
 
     lateinit var bottom : BottomTabBar
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bottom = findViewById(R.id.bottom) as BottomTabBar
-
+       // ImmersionBar.with(this).init()
         bottom.init(getSupportFragmentManager())
                 .setImgSize(50F, 50F)
                 .setFontSize(8F)
@@ -30,5 +30,10 @@ class MainActivity : AppCompatActivity() {
                 .addTabItem("热门",R.mipmap.hot_selected,R.mipmap.hot_normal, FragmentHot::class.java)
                 .addTabItem("我的",R.mipmap.mine_selected, R.mipmap.mine_normal, FragmentMine::class.java)
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //ImmersionBar.with(this).destroy()
     }
 }
