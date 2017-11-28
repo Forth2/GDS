@@ -9,16 +9,15 @@ import android.view.ViewGroup
  */
 class MyIndexAdapter : RecyclerView.Adapter<MyIndexAdapter.MyViewHolder>() {
     override fun getItemCount(): Int {
-        return 1
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
-
-        return MyViewHolder()
-
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     inner class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
