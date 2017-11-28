@@ -5,6 +5,9 @@ package bawei.com.gds_project.api
  */
 class Api {
 
-    public var BASE_URL = "http://baobab.kaiyanapp.com/api/"
+    companion object {
+        public var BASE_URL = "http://baobab.kaiyanapp.com/api/"
+    }
+
 
 }

@@ -21,10 +21,6 @@ class FragmentIndex : Fragment() {
         val index_title = view.findViewById<TextView>(R.id.index_title)
         val rv_index = view.findViewById<RecyclerView>(R.id.rv_index)
 
-//        var  videoflow = ApiRetrofitUtils.getInstance()
-//                .getClientApi(ApiService::class.java, Api)
-//                .getVideo(name,"date","26868b32e808498db32fd51fb422d00175e179df","83")
-
 
         return view
     }

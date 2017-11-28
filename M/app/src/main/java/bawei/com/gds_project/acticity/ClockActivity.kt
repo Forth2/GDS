@@ -10,9 +10,9 @@ import android.util.Log
 import bawei.com.gds_project.R
 import bawei.com.gds_project.service.ClockService
 import bawei.com.gds_project.service.ClockService.Bind
-import bawei.com.gds_project.utils.BaseActivity
+import bawei.com.gds_project.utils.BaseActivity2
 
-class ClockActivity : BaseActivity() {
+class ClockActivity : BaseActivity2() {
 
     private var bind: Bind? = null
 
