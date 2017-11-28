@@ -1,6 +1,7 @@
 package bawei.com.gds_project.utils
 
 import bawei.com.gds_project.bean.FindBean
+import bawei.com.gds_project.bean.FindSonBean
 import bawei.com.gds_project.bean.HotBean
 import bawei.com.gds_project.bean.IndexBean
 import io.reactivex.Flowable
@@ -34,7 +35,7 @@ interface ApiService {
      * 发现详情接口
      */
     @GET("v3/videos")
-    fun getFindMoreData(@Query("strategy") strategy:String,@Query("udid") udid:String,@Query("vc") vc:Int,@Query("categoryName") categoryName : String,@Query("start") start : Int) : Flowable<HotBean>
+    fun getFindMoreData(@Query("strategy") strategy:String,@Query("udid") udid:String,@Query("vc") vc:Int,@Query("categoryName") categoryName : String,@Query("start") start : Int) : Flowable<FindSonBean>
 
     /**
      * 热门排行
