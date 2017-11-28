@@ -17,7 +17,7 @@ class MyIndexAdapter : RecyclerView.Adapter<MyIndexAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        TODO("not i mplemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     inner class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
