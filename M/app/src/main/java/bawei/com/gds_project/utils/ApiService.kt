@@ -28,7 +28,7 @@ interface ApiService {
      * 发现页面接口
      */
     @GET("v2/categories?udid=26868b32e808498db32fd51fb422d00175e179df&vc=83")
-    fun getFindData() :Flowable<MutableList<FindBean>>
+    fun getFindData() :Flowable<List<FindBean>>
 
     /**
      * 发现详情接口

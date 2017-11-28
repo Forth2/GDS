@@ -25,7 +25,7 @@ class IndexPresenterImpl : IndexPresenter {
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe{ s : IndexBean ->
-                    indexView!!.showData()
+                    indexView!!.showData(s)
                 }
     }
 }
