@@ -1,6 +1,7 @@
 package bawei.com.gds_project.index_model
 
 import bawei.com.gds_project.api.Api
+import bawei.com.gds_project.bean.IndexBean
 import bawei.com.gds_project.utils.ApiRetrofit
 import bawei.com.gds_project.utils.ApiService
 import io.reactivex.Flowable

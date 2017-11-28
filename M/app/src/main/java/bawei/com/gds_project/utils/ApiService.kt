@@ -1,6 +1,7 @@
 package bawei.com.gds_project.utils
 
 import bawei.com.gds_project.bean.FindBean
+import bawei.com.gds_project.bean.HotBean
 import bawei.com.gds_project.bean.IndexBean
 import io.reactivex.Flowable
 import retrofit2.http.GET

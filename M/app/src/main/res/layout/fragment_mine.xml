@@ -8,6 +8,7 @@
         <TextView
             android:id="@+id/mine_setting"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp8"
             android:layout_marginRight="@dimen/dp10"
             android:drawableRight="@mipmap/icon_setting"
             android:layout_height="@dimen/dp40" />
@@ -71,22 +72,24 @@
         android:layout_height="1dp">
     </View>
     <TextView
+        android:id="@+id/mine_cache"
         android:layout_width="match_parent"
         android:text="我的缓存"
         android:layout_marginTop="@dimen/dp50"
         android:gravity="center"
         android:layout_height="@dimen/dp40" />
     <TextView
+        android:id="@+id/mine_look"
         android:layout_width="match_parent"
         android:text="观看记录"
         android:gravity="center"
         android:layout_height="@dimen/dp40" />
     <TextView
+        android:id="@+id/mine_message"
         android:layout_width="match_parent"
         android:text="意见反馈"
         android:gravity="center"
         android:layout_height="@dimen/dp40" />
-
 
 
 
