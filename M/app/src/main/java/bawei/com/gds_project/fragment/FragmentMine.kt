@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import bawei.com.gds_project.R
 
 /**
  *  1.类的用途
@@ -13,6 +14,14 @@ import android.view.ViewGroup
  */
 class FragmentMine :Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        var view = View.inflate(context, R.layout.fragment_mine, null)
+        imageData()
+        return view
     }
+
+    private fun imageData() {
+
+
+    }
+
 }
