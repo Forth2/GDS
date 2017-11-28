@@ -6,13 +6,13 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import bawei.com.gds_project.R
 import bawei.com.gds_project.service.ClockService
 import bawei.com.gds_project.service.ClockService.Bind
+import bawei.com.gds_project.utils.BaseActivity
 
-class ClockActivity : AppCompatActivity() {
+class ClockActivity : BaseActivity() {
 
     private var bind: Bind? = null
 

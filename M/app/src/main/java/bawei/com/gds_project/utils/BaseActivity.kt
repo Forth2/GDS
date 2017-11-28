@@ -11,7 +11,7 @@ import com.gyf.barlibrary.ImmersionBar
 /**
  * Created by 999 on 2017/11/28.
  */
-class BaseActivity :AppCompatActivity() {
+open class BaseActivity :AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
