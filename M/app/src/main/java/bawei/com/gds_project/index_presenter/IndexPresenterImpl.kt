@@ -1,5 +1,6 @@
 package bawei.com.gds_project.index_presenter
 
+import bawei.com.gds_project.bean.IndexBean
 import bawei.com.gds_project.index_model.IndexModel
 import bawei.com.gds_project.index_model.IndexModelImpl
 import bawei.com.gds_project.index_view.IndexView
