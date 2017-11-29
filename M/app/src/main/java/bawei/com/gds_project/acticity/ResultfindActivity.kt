@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import android.widget.Toast
 import bawei.com.gds_project.R
 import bawei.com.gds_project.adapter.FindResultAdapter
@@ -28,18 +29,28 @@ class ResultfindActivity : AppCompatActivity(),FindResultView {
         //调用Presenter对象
         findResultPresenter?.getVideoData(name)
         tv_findResultTitle.setText(name)
+        iv_findResultBack.setOnClickListener(View.OnClickListener {
+            finish()
+        })
     }
     override fun getData(bean: FindSonBean) {
+        //初始化适配器
         var findResultAdapter=FindResultAdapter(bean,this@ResultfindActivity)
+        //加载布局管理器
         recycle_findResult.layoutManager=LinearLayoutManager(this@ResultfindActivity)
+        //设置适配器
         recycle_findResult.adapter=findResultAdapter
+        //设置条目点击监听
         findResultAdapter.setOnItemClickListener(object:FindResultAdapter.OnItemClickListener{
             override fun onClick(position: Int) {
                 val listBean = bean.itemList?.get(position)
                 Toast.makeText(this@ResultfindActivity,"下标—>"+position , Toast.LENGTH_SHORT).show()
+                //初始化Intent对象
                 var intent= Intent(this@ResultfindActivity,VideoPlayerActivity::class.java)
+                //传值
                 intent.putExtra("judge","find")
                 intent.putExtra("data",listBean)
+                //跳转
                 startActivity(intent)
             }
 
