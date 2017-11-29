@@ -29,11 +29,11 @@
 
         <activity android:name=".acticity.MainActivity" />
         <activity android:name=".utils.BaseActivity2" />
-<<<<<<< HEAD
+
         <activity android:name=".acticity.SettingActivity"></activity>
-=======
+
         <activity android:name=".acticity.ResultfindActivity"></activity>
->>>>>>> 9bd4fde3cacd277ed6d24964e2c07b1f74a13347
+
     </application>
 
 </manifest>
