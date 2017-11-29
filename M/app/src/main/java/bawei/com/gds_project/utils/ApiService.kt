@@ -17,7 +17,7 @@ interface ApiService {
      * 获取首页的数据
      */
     @GET("v2/feed?num=1&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83")
-    fun getIndexData() : Flowable<IndexBean>
+    fun getIndexData() : Flowable<IndexBean.Bean>
 
     /**
      *  获取首页第一页之后的数据 ?date=1499043600000&num=2

@@ -49,7 +49,6 @@ class FragmentMine :Fragment() ,View.OnClickListener {
           R.id.mine_setting ->{
             var intent=Intent(activity,SettingActivity::class.java)
 
-
           }
           R.id.mine_fresco ->{
 

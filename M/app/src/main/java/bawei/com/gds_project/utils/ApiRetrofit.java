@@ -68,8 +68,6 @@ public class ApiRetrofit implements ApiRetrofitInterface {
         return retrofit;
     }
 
-
-
     //封装参数的接口对象
     @Override
     public <T> T getClientApi(Class<T> cla, String path) {

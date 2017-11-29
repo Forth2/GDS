@@ -8,6 +8,6 @@ import io.reactivex.Flowable
  */
 interface IndexModel {
 
-    fun getIndexData() : Flowable<IndexBean>
+    fun getindexData() : Flowable<IndexBean.Bean>
 
 }

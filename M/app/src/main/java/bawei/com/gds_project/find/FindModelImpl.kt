@@ -12,6 +12,7 @@ import io.reactivex.Flowable
 class FindModelImpl:FindModel {
 
     override fun getFindBean(): Flowable<List<FindBean>> {
+
         var findData = ApiRetrofit.getInstance()
                 .getClientApi(ApiService::class.java, Api.BASE_URL)
                 .getFindData()

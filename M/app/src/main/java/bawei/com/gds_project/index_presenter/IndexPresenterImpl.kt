@@ -1,5 +1,6 @@
 package bawei.com.gds_project.index_presenter
 
+import android.util.Log
 import bawei.com.gds_project.bean.IndexBean
 import bawei.com.gds_project.index_model.IndexModel
 import bawei.com.gds_project.index_model.IndexModelImpl
@@ -8,7 +9,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 /**
- * Created by dell-pc on 2017/11/28.
+ * Created by 李蓉 on 2017/11/28.
  */
 class IndexPresenterImpl : IndexPresenter {
 
@@ -20,12 +21,13 @@ class IndexPresenterImpl : IndexPresenter {
         indexModel = IndexModelImpl()
     }
 
-    override fun getIndexData() {
-        val flowable = indexModel!!.getIndexData()
+    override fun getIndex() {
+        Log.i("sss","逻辑判断")
+        val flowable = indexModel!!.getindexData()
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe{ s : IndexBean ->
-                    indexView!!.showData(s)
+                .subscribe{ s : IndexBean.Bean ->
+                    indexView?.showData(s)
                 }
     }
 }

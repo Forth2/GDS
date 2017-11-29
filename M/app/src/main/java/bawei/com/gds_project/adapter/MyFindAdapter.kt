@@ -22,14 +22,19 @@ class MyFindAdapter(mContext:Context,mlist:List<FindBean>): RecyclerView.Adapter
 
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+        //加载布局
         var v=LayoutInflater.from(context).inflate(R.layout.find_item,parent,false)
-
-        return MyViewHolder(v)
+        //加载ViewHolder
+        val holder = MyViewHolder(v)
+        holder.itemView.setOnClickListener {
+            listener?.onClick(holder.position)
+        }
+        return holder
     }
 
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+        //将数据进行绑定
         holder?.textView?.setText(list.get(position).name)
-//        Glide.with(context).load(list.get(position).bgPicture).into(holder?.simpleDrawee)
         var uri=Uri.parse(list.get(position).bgPicture)
         var contronal:AbstractDraweeController<*,*>?=Fresco.newDraweeControllerBuilder()
                 .setUri(uri)
@@ -45,8 +50,16 @@ class MyFindAdapter(mContext:Context,mlist:List<FindBean>): RecyclerView.Adapter
     }
 
     class MyViewHolder(itemView: View?):RecyclerView.ViewHolder(itemView){
-        var textView:TextView= itemView?.findViewById(R.id.tv_titleFind)!!
-//        var simpleDrawee:ImageView= itemView?.findViewById(R.id.fresco_find)!!
-        var simpleDrawee:SimpleDraweeView= itemView?.findViewById(R.id.fresco_find)!!
+        //查找组件
+        var textView:TextView= itemView!!.findViewById(R.id.tv_titleFind)
+
+        var simpleDrawee:SimpleDraweeView= itemView!!.findViewById(R.id.fresco_find)
+    }
+    interface OnItemClickListener{
+        fun onClick(position:Int)
+    }
+    private var listener:OnItemClickListener?=null
+     fun setOnItemClickListener(listener : OnItemClickListener){
+        this.listener=listener
     }
 }
