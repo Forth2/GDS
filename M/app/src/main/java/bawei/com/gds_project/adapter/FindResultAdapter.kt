@@ -37,6 +37,9 @@ class FindResultAdapter(mBean:FindSonBean,mContext:Context): RecyclerView.Adapte
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.findresult_item, parent, false)
         var holder=MyViewHolder(view)
+        holder?.itemView?.setOnClickListener {
+            listener?.onClick(holder.position)
+        }
         return holder
     }
 
@@ -44,5 +47,12 @@ class FindResultAdapter(mBean:FindSonBean,mContext:Context): RecyclerView.Adapte
     class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
         var tv_findResult:TextView=itemView!!.findViewById(R.id.tv_findResult)
         var iv_findResult:ImageView=itemView!!.findViewById(R.id.iv_findResult)
+    }
+    interface OnItemClickListener{
+        fun onClick(position: Int)
+    }
+    private var listener:OnItemClickListener?=null
+    fun setOnItemClickListener(listener:OnItemClickListener){
+        this.listener=listener
     }
 }

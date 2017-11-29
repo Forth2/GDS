@@ -1,9 +1,11 @@
 package bawei.com.gds_project.bean
 
+import java.io.Serializable
+
 /**
  * Created by 杨圆圆 on 2017/11/28.
  */
-class FindSonBean {
+class FindSonBean:Serializable {
 
 
     var count: Int = 0
@@ -11,14 +13,14 @@ class FindSonBean {
     var nextPageUrl: String? = null
     var itemList: List<ItemListBean>? = null
 
-    class ItemListBean {
+    class ItemListBean:Serializable{
 
         var type: String? = null
         var data: DataBean? = null
         var tag: Any? = null
         var id: Int = 0
 
-        class DataBean {
+        class DataBean:Serializable {
 
 
             var dataType: String? = null
@@ -61,7 +63,7 @@ class FindSonBean {
             var labelList: List<*>? = null
             var subtitles: List<*>? = null
 
-            class ProviderBean {
+            class ProviderBean:Serializable {
 
 
                 var name: String? = null
@@ -69,7 +71,7 @@ class FindSonBean {
                 var icon: String? = null
             }
 
-            class AuthorBean {
+            class AuthorBean:Serializable {
 
                 var id: Int = 0
                 var icon: String? = null
@@ -84,7 +86,7 @@ class FindSonBean {
                 var approvedNotReadyVideoCount: Int = 0
                 var isIfPgc: Boolean = false
 
-                class FollowBean {
+                class FollowBean:Serializable {
 
 
                     var itemType: String? = null
@@ -92,7 +94,7 @@ class FindSonBean {
                     var isFollowed: Boolean = false
                 }
 
-                class ShieldBean {
+                class ShieldBean:Serializable {
 
 
                     var itemType: String? = null
@@ -101,7 +103,7 @@ class FindSonBean {
                 }
             }
 
-            class CoverBean {
+            class CoverBean:Serializable {
 
 
                 var feed: String? = null
@@ -111,14 +113,14 @@ class FindSonBean {
                 var homepage: Any? = null
             }
 
-            class WebUrlBean {
+            class WebUrlBean:Serializable {
 
 
                 var raw: String? = null
                 var forWeibo: String? = null
             }
 
-            class ConsumptionBean {
+            class ConsumptionBean:Serializable {
 
 
                 var collectionCount: Int = 0
@@ -126,7 +128,7 @@ class FindSonBean {
                 var replyCount: Int = 0
             }
 
-            class TagsBean {
+            class TagsBean:Serializable {
 
 
                 var id: Int = 0

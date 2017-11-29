@@ -1,5 +1,6 @@
 package bawei.com.gds_project.acticity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -32,6 +33,17 @@ class ResultfindActivity : AppCompatActivity(),FindResultView {
         var findResultAdapter=FindResultAdapter(bean,this@ResultfindActivity)
         recycle_findResult.layoutManager=LinearLayoutManager(this@ResultfindActivity)
         recycle_findResult.adapter=findResultAdapter
+        findResultAdapter.setOnItemClickListener(object:FindResultAdapter.OnItemClickListener{
+            override fun onClick(position: Int) {
+                val listBean = bean.itemList?.get(position)
+                Toast.makeText(this@ResultfindActivity,"下标—>"+position , Toast.LENGTH_SHORT).show()
+                var intent= Intent(this@ResultfindActivity,VideoPlayerActivity::class.java)
+                intent.putExtra("judge","find")
+                intent.putExtra("data",listBean)
+                startActivity(intent)
+            }
+
+        })
     }
 
 }
