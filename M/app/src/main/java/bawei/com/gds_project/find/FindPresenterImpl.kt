@@ -10,13 +10,15 @@ import io.reactivex.schedulers.Schedulers
 class FindPresenterImpl:FindPresenter {
     var findView:FindView?=null
     var findModel:FindModelImpl?=null
-
+    //有参构造得到View
     constructor(findView: FindView?) {
         this.findView = findView
+        //多态的方式得到Model
         findModel= FindModelImpl()
     }
 
     override fun getFind() {
+        //调用Model的方法
         val server = findModel?.getFindBean()
         server  ?.subscribeOn(Schedulers.io())
                 ?.observeOn(AndroidSchedulers.mainThread())
