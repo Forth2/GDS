@@ -28,7 +28,8 @@
         <service android:name=".service.ClockService" />
 
         <activity android:name=".acticity.MainActivity" />
-        <activity android:name=".utils.BaseActivity2"></activity>
+        <activity android:name=".utils.BaseActivity2" />
+        <activity android:name=".acticity.SettingActivity"></activity>
     </application>
 
 </manifest>
