@@ -31,29 +31,19 @@ dependencies {
     })
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //高版本的依赖才能看到多外拦截器
-    // 其他依赖
-
-    //沉浸式依赖
-
-    
-
-    //沉浸式依赖
-    
 
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
     testCompile 'junit:junit:4.12'
-
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.gyf.barlibrary:barlibrary:2.2.9'
-    testCompile 'junit:junit:4.12'
-
-
-
-compile 'com.android.support:appcompat-v7:26.+'
 
     compile 'com.android.support:appcompat-v7:26.+'
 
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.gyf.barlibrary:barlibrary:2.2.9'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.gyf.barlibrary:barlibrary:2.2.9'
+    compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.hjm:BottomTabBar:1.1.1'
     compile 'com.android.support:recyclerview-v7:26.+'
@@ -70,8 +60,6 @@ compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.shuyu:GSYVideoPlayer:1.6.8'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.github.bumptech.glide:glide:3.5.2'
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.gyf.barlibrary:barlibrary:2.2.9'
     testCompile 'junit:junit:4.12'
 }
 repositories {

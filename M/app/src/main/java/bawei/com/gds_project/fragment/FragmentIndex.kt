@@ -1,5 +1,6 @@
 package bawei.com.gds_project.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import bawei.com.gds_project.R
+import bawei.com.gds_project.acticity.VideoPlayerActivity
 import bawei.com.gds_project.adapter.MyIndexAdapter
 import bawei.com.gds_project.bean.IndexBean
 import bawei.com.gds_project.index_presenter.IndexPresenterImpl
@@ -33,10 +35,20 @@ class FragmentIndex : Fragment(),IndexView {
                 }
             }
         }
+        //创建适配器
         rv_index.layoutManager = LinearLayoutManager(activity)
         val indexAdapter = MyIndexAdapter(typeList, activity)
         rv_index.adapter = indexAdapter
-        Log.i("sss","创建适配器成功")
+        //点击监听
+        indexAdapter?.setItemClick(object : MyIndexAdapter.OnItemClickListen{
+            override fun onItemClick(position: Int) {
+                var intent = Intent(activity,VideoPlayerActivity::class.java)
+                intent.putExtra("judge","index")
+                intent.putExtra("data",typeList.get(position).data)
+                startActivity(intent)
+            }
+        })
+
     }
 
     var indexPresenter : IndexPresenterImpl ?= null

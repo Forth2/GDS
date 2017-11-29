@@ -29,11 +29,9 @@
 
         <activity android:name=".acticity.MainActivity" />
         <activity android:name=".utils.BaseActivity2" />
-
-        <activity android:name=".acticity.SettingActivity"></activity>
-
-        <activity android:name=".acticity.ResultfindActivity"></activity>
-
+        <activity android:name=".acticity.SettingActivity" />
+        <activity android:name=".acticity.ResultfindActivity" />
+        <activity android:name=".acticity.VideoPlayerActivity"></activity>
     </application>
 
 </manifest>

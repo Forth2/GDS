@@ -3,7 +3,6 @@ package bawei.com.gds_project.adapter
 import android.content.Context
 import android.net.Uri
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +29,9 @@ class MyIndexAdapter(issueList: List<IndexBean.Item>, con: Context) : RecyclerVi
         val itemList = list!!.get(position)
 
         holder?.index_title?.text = itemList.data.title
-        holder?.index_category?.text = itemList.data.category
+        val category = itemList.data.category
+        val duration = itemList.data.duration
+        holder?.index_category?.text = "发布于 "+ category + "/"+duration/60 + ":"+duration%60
         val parse = Uri.parse(itemList.data.cover.detail)
         holder?.index_img?.setImageURI(parse)
 
@@ -39,7 +40,9 @@ class MyIndexAdapter(issueList: List<IndexBean.Item>, con: Context) : RecyclerVi
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.index_item, parent, false)
         val myViewHolder = MyViewHolder(view)
-        Log.i("sss","创建布局")
+        myViewHolder.itemView.setOnClickListener {
+            onItemClickListen?.onItemClick(myViewHolder.position)
+        }
         return myViewHolder
     }
 
