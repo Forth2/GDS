@@ -4,7 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="bawei.com.gds_project.acticity.ResultfindActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:id="@+id/iv_findResultBack"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/fan">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/tv_findResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="标 题"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_findResult"
         android:layout_width="match_parent"
