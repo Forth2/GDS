@@ -16,7 +16,7 @@ import bawei.com.gds_project.index_presenter.IndexPresenterImpl
 import bawei.com.gds_project.index_view.IndexView
 
 /**
- * Created by dell-pc on 2017/11/27.
+ * Created by 李蓉 on 2017/11/27.
  */
 class FragmentIndex : Fragment(),IndexView {
 

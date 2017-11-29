@@ -9,7 +9,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 /**
- * Created by dell-pc on 2017/11/28.
+ * Created by 李蓉 on 2017/11/28.
  */
 class IndexPresenterImpl : IndexPresenter {
 

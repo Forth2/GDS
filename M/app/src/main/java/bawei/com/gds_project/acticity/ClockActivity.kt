@@ -15,12 +15,13 @@ import bawei.com.gds_project.utils.BaseActivity2
 class ClockActivity : BaseActivity2() {
 
     private var bind: Bind? = null
+    var conn : ServiceConnection ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clock)
 
-        val conn = object : ServiceConnection {
+        conn = object : ServiceConnection {
 
             //解除绑定
             override fun onServiceDisconnected(name: ComponentName) {
@@ -60,4 +61,12 @@ class ClockActivity : BaseActivity2() {
         bindService(service, conn, Context.BIND_AUTO_CREATE)
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if(bind != null){
+            unbindService(conn)
+        }
+    }
+
 }

@@ -13,7 +13,7 @@ import bawei.com.gds_project.bean.IndexBean
 import com.facebook.drawee.view.SimpleDraweeView
 
 /**
- * Created by dell-pc on 2017/11/28.
+ * Created by 李蓉 on 2017/11/28.
  */
 class MyIndexAdapter(issueList: List<IndexBean.Item>, con: Context) : RecyclerView.Adapter<MyIndexAdapter.MyViewHolder>() {
 
