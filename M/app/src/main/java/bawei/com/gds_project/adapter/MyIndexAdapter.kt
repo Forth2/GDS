@@ -49,4 +49,14 @@ class MyIndexAdapter(issueList: List<IndexBean.Item>, con: Context) : RecyclerVi
         var index_category = itemView!!.findViewById<TextView>(R.id.id_category)
     }
 
+    interface OnItemClickListen{
+        fun onItemClick(position : Int)
+    }
+
+    var onItemClickListen : OnItemClickListen ?= null
+
+    fun setItemClick(onItemClickListen: OnItemClickListen){
+        this.onItemClickListen = onItemClickListen
+    }
+
 }

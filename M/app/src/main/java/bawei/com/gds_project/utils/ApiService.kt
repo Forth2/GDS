@@ -40,8 +40,8 @@ interface ApiService {
     /**
      * 热门排行
      */
-    @GET("v3/ranklist")
-    fun getHotData(@Query("num") num :Int,@Query("strategy") strategy :String,
+    @GET("v3/ranklist?strategy=%s")
+    fun getHotData(@Query("num") num :Int,
                    @Query("udid") udid :String,@Query("vc") vc :Int) : Flowable<HotBean>
 
     /**
