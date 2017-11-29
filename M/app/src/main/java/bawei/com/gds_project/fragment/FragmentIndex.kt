@@ -23,7 +23,7 @@ class FragmentIndex : Fragment(),IndexView {
     var typeList = ArrayList<IndexBean.Item>()
 
     override fun showData(indexbean: IndexBean.Bean) {
-        Log.i("sss","展示页面"+indexbean.issueList)
+       // Log.i("sss","展示页面"+indexbean.issueList)
         val issueList = indexbean.issueList
         for (i in issueList.indices){
             for (j in issueList.get(i).itemList.indices) {
@@ -36,7 +36,7 @@ class FragmentIndex : Fragment(),IndexView {
         rv_index.layoutManager = LinearLayoutManager(activity)
         val indexAdapter = MyIndexAdapter(typeList, activity)
         rv_index.adapter = indexAdapter
-        Log.i("sss","创建适配器成功")
+       // Log.i("sss","创建适配器成功")
     }
 
     var indexPresenter : IndexPresenterImpl ?= null
