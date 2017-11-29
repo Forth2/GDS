@@ -35,7 +35,7 @@ class ClockService : Service() {
     //解除绑定
     override fun onUnbind(intent: Intent): Boolean {
         // TODO Auto-generated method stub
-        return super.onUnbind(intent)
+        return true
     }
 
     fun stop() {

@@ -5,6 +5,6 @@ package bawei.com.gds_project.index_presenter
  */
 interface IndexPresenter {
 
-    fun getIndexData()
+    fun getIndex()
 
 }

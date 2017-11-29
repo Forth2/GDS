@@ -1,5 +1,6 @@
 package bawei.com.gds_project.index_model
 
+import android.util.Log
 import bawei.com.gds_project.api.Api
 import bawei.com.gds_project.bean.IndexBean
 import bawei.com.gds_project.utils.ApiRetrofit
@@ -11,9 +12,10 @@ import io.reactivex.Flowable
  */
 class IndexModelImpl : IndexModel {
     //请求首页数据的方法
-    override fun getIndexData(): Flowable<IndexBean> {
+    override fun getindexData(): Flowable<IndexBean.Bean> {
         val clientApi = ApiRetrofit.getInstance().getClientApi(ApiService::class.java, Api.BASE_URL)
-        val indexData = clientApi.getIndexData();
+        val indexData = clientApi.getIndexData()
+        Log.i("sss","请求数据")
         return indexData
     }
 }

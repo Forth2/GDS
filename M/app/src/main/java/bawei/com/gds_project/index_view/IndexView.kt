@@ -8,6 +8,6 @@ import bawei.com.gds_project.bean.IndexBean
 open interface IndexView {
 
     //展示数据
-    fun showData(indexbean : IndexBean)
+    fun showData(indexbean : IndexBean.Bean)
 
 }
