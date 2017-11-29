@@ -1,5 +1,6 @@
 package bawei.com.gds_project.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import bawei.com.gds_project.R
+import bawei.com.gds_project.acticity.ResultfindActivity
 import bawei.com.gds_project.adapter.MyFindAdapter
 import bawei.com.gds_project.bean.FindBean
 import bawei.com.gds_project.find.FindPresenterImpl
@@ -35,7 +37,7 @@ class FragmentFind:Fragment(),FindView {
     }
     override fun getBean(bean: List<FindBean>) {
         //给RecycleView设置布局管理器
-        recycle_find!!.layoutManager=GridLayoutManager(context, 2)
+        recycle_find!!.layoutManager= GridLayoutManager(context, 2) as RecyclerView.LayoutManager?
         //初始化适配器
         var myFindAdapter=MyFindAdapter(context,bean)
         //给RecycleView添加适配器
@@ -44,7 +46,9 @@ class FragmentFind:Fragment(),FindView {
             override fun onClick(position: Int) {
                 Toast.makeText(activity,"haha"+position,Toast.LENGTH_SHORT).show()
                 val name = bean.get(position).name
-
+                var intent=Intent(activity,ResultfindActivity::class.java)
+                intent.putExtra("name",name)
+                startActivity(intent)
             }
         })
     }

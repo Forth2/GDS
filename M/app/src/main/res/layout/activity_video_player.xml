@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bawei.com.gds_project.acticity.VideoPlayerActivity">
+
+    <com.shuyu.gsyvideoplayer.video.CustomGSYVideoPlayer
+        android:id="@+id/gsyVideo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"></com.shuyu.gsyvideoplayer.video.CustomGSYVideoPlayer>
+
+    <LinearLayout
+        android:background="@color/greenyellow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+        android:id="@+id/video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+        android:textSize="20sp"
+            android:layout_marginTop="15dp"
+        android:text="标题"/>
+
+        <TextView
+            android:id="@+id/video_cate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="时间"/>
+
+        <TextView
+            android:id="@+id/video_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp"
+            android:text="内容"/>
+
+    </LinearLayout>
+
+</LinearLayout>

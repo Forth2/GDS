@@ -29,9 +29,15 @@
 
         <activity android:name=".acticity.MainActivity" />
         <activity android:name=".utils.BaseActivity2" />
+<<<<<<< HEAD
         <activity android:name=".acticity.SettingActivity"></activity>
 
         <activity android:name=".acticity.ResultfindActivity"></activity>
+=======
+        <activity android:name=".acticity.SettingActivity" />
+        <activity android:name=".acticity.ResultfindActivity" />
+        <activity android:name=".acticity.VideoPlayerActivity"></activity>
+>>>>>>> 9e72d99b231c4140906ee701e44c02c5bfd83621
     </application>
 
 </manifest>
