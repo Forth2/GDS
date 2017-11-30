@@ -21,11 +21,11 @@ class HotMpdle : IHotModle {
 
     var arr2 = ArrayList<List<HotBean.ItemListBean>>()
 
-    override fun getData(context: Context, listener: ShowListener) {
+    override fun getData(context: Context, listener: ShowListener,strategy : String) {
 
         var hotData = ApiRetrofit.getInstance()
                 .getClientApi(ApiService::class.java, Api.BASE_URL)
-                .getHotData(10,"weekly","26868b32e808498db32fd51fb422d00175e179df",83)
+                .getHotData(10,strategy,"26868b32e808498db32fd51fb422d00175e179df",83)
           //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=%s&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83
     //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=monthly&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83
         //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=%25s&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83

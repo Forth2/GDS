@@ -9,5 +9,5 @@ import bawei.com.gds_project.hotmvp.ShowListener
  */
 
 interface IHotModle {
-    fun getData(context : Context,listener:ShowListener)
+    fun getData(context : Context,listener:ShowListener,strategy : String)
 }

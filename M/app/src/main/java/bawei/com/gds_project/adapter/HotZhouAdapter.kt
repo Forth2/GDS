@@ -42,6 +42,9 @@ class HotZhouAdapter(issueList: List<HotBean.ItemListBean>, con: Context) : Recy
         val view = LayoutInflater.from(context).inflate(R.layout.item_hot_fragment, parent, false)
         val myViewHolder = MyViewHolder(view)
         //Log.i("sss","创建布局")
+        myViewHolder.itemView.setOnClickListener {
+            onItemClickListen?.onItemClick(myViewHolder.position)
+        }
         return myViewHolder
     }
 

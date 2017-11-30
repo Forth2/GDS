@@ -22,8 +22,8 @@ class HotPresenter:IHotPresenter,ShowListener {
         hotmodle = HotMpdle()
     }
 
-    override fun relevance(context: Context) {
-        hotmodle?.getData(context,this)
+    override fun relevance(context: Context,weekly : String) {
+        hotmodle?.getData(context,this,weekly)
     }
 
     override fun getData(hotBean :List<HotBean.ItemListBean>) {

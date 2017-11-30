@@ -1,11 +1,13 @@
 package bawei.com.gds_project.fragment.hot_fragments
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import bawei.com.gds_project.R
 import bawei.com.gds_project.utils.BaseFragment
 import android.support.v7.widget.OrientationHelper
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
+import bawei.com.gds_project.acticity.VideoPlayerActivity
 import bawei.com.gds_project.adapter.HotZhouAdapter
 import bawei.com.gds_project.adapter.MyIndexAdapter
 import bawei.com.gds_project.bean.HotBean
@@ -34,7 +36,7 @@ class FragmentZhou : BaseFragment(),IHotView {
     override fun initView() {
         recycle = view!!.findViewById<RecyclerView>(R.id.fragment_hot_zhou_recycle)
         var presenter :IHotPresenter?= HotPresenter(this)
-        presenter?.relevance(context)
+        presenter?.relevance(context,"weekly")
 
     }
     override fun showData(hotarr: List<HotBean.ItemListBean>) {
@@ -43,6 +45,15 @@ class FragmentZhou : BaseFragment(),IHotView {
         recycle.layoutManager = LinearLayoutManager(activity)
         recycle.adapter = indexAdapter
         Log.i("ss","走了"+hotarr.size)
+        //点击监听
+        indexAdapter?.setItemClick(object : HotZhouAdapter.OnItemClickListen{
+            override fun onItemClick(position: Int) {
+                var intent = Intent(activity, VideoPlayerActivity::class.java)
+                intent.putExtra("judge","hot")
+                intent.putExtra("hotdata",hotarr.get(position).data!!.date)
+                startActivity(intent)
+            }
+        })
     }
 
 }
