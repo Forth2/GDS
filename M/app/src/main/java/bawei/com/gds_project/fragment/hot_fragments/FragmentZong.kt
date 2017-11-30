@@ -43,7 +43,7 @@ class FragmentZong : BaseFragment(), IHotView {
             override fun onItemClick(position: Int) {
                 var intent = Intent(activity, VideoPlayerActivity::class.java)
                 intent.putExtra("judge","hot")
-                intent.putExtra("hotdata",hotBean.get(position).data!!.date)
+                intent.putExtra("hotdata",hotBean.get(position).data)
                 startActivity(intent)
             }
         })
