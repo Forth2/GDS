@@ -35,13 +35,15 @@ interface ApiService {
      * 发现详情接口
      */
     @GET("v3/videos")
-    fun getFindMoreData(@Query("strategy") strategy:String,@Query("udid") udid:String,@Query("vc") vc:Int,@Query("categoryName") categoryName : String,@Query("start") start : Int) : Flowable<FindSonBean>
+    fun getFindMoreData(@Query("strategy") strategy:String,
+                        @Query("udid") udid:String,@Query("vc") vc:Int,
+                        @Query("categoryName") categoryName : String,@Query("start") start : Int) : Flowable<FindSonBean>
 
     /**
      * 热门排行
      */
-    @GET("v3/ranklist")
-    fun getHotData(@Query("num") num :Int,@Query("strategy") strategy :String,
+    @GET("v3/ranklist?strategy=%s")
+    fun getHotData(@Query("num") num :Int,@Query("strategy") strategy : String,
                    @Query("udid") udid :String,@Query("vc") vc :Int) : Flowable<HotBean>
 
     /**

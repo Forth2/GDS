@@ -71,7 +71,6 @@ class FragmentMine :Fragment() ,View.OnClickListener {
               })
               alertDialogBuilder.create().show()
 
-
           }
           R.id.mine_look ->{
 
