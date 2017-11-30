@@ -27,7 +27,7 @@ class HotMpdle : IHotModle {
                 .getClientApi(ApiService::class.java, Api.BASE_URL)
                 .getHotData(10,"26868b32e808498db32fd51fb422d00175e179df",83)
           //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=%s&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83
-    //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=%s&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83
+    //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=monthly&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83
         //http://baobab.kaiyanapp.com/api/v3/ranklist?num=10&strategy=%25s&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83
         hotData?.subscribeOn(Schedulers.io())
                 ?.observeOn(AndroidSchedulers.mainThread())

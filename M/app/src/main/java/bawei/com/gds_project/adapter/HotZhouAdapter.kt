@@ -24,6 +24,8 @@ class HotZhouAdapter(issueList: List<HotBean.ItemListBean>, con: Context) : Recy
 
         val parse = Uri.parse(hotbean.data!!.cover!!.detail)
         holder?.index_img?.setImageURI(parse)
+        holder?.hot_title?.setText(hotbean.data!!.title)
+        holder?.hot_title_time?.setText(hotbean.data!!.category+"|"+hotbean.data!!.duration/60+"'"+hotbean.data!!.duration%60)
     }
 
 
@@ -45,7 +47,8 @@ class HotZhouAdapter(issueList: List<HotBean.ItemListBean>, con: Context) : Recy
 
     inner class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
         var index_img = itemView!!.findViewById<SimpleDraweeView>(R.id.fresco_test)
-
+        var hot_title = itemView!!.findViewById<TextView>(R.id.hot_title)
+        var hot_title_time = itemView!!.findViewById<TextView>(R.id.hot_title_time)
     }
 
     interface OnItemClickListen{
