@@ -33,17 +33,14 @@
         <activity android:name=".acticity.SettingActivity"></activity>
 
         <activity android:name=".acticity.ResultfindActivity"></activity>
-<<<<<<< HEAD
         <activity android:name=".acticity.SettingActivity" />
         <activity android:name=".acticity.ResultfindActivity" />
         <activity android:name=".acticity.VideoPlayerActivity"></activity>
-=======
 
         <activity android:name=".acticity.SettingActivity" />
         <activity android:name=".acticity.ResultfindActivity" />
         <activity android:name=".acticity.VideoPlayerActivity"></activity>
 
->>>>>>> 7f89ec0a6805041fd07c67f2e62d8a6fa62731da
     </application>
 
 </manifest>

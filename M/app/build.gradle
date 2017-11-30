@@ -40,22 +40,12 @@ dependencies {
 
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
-<<<<<<< HEAD
-=======
     testCompile 'junit:junit:4.12'
 
-
-
->>>>>>> 7f89ec0a6805041fd07c67f2e62d8a6fa62731da
 
 compile 'com.android.support:appcompat-v7:26.+'
 
     compile 'com.android.support:appcompat-v7:26.+'
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f89ec0a6805041fd07c67f2e62d8a6fa62731da
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
     compile 'com.android.support:appcompat-v7:26.+'
