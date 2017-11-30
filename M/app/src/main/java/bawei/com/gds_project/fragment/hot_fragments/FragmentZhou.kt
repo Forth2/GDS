@@ -44,7 +44,7 @@ class FragmentZhou : BaseFragment(),IHotView {
         val indexAdapter = HotZhouAdapter(hotarr, activity)
         recycle.layoutManager = LinearLayoutManager(activity)
         recycle.adapter = indexAdapter
-        Log.i("ss","走了"+hotarr.size)
+        //Log.i("ss","走了"+hotarr.size)
         //点击监听
         indexAdapter?.setItemClick(object : HotZhouAdapter.OnItemClickListen{
             override fun onItemClick(position: Int) {
