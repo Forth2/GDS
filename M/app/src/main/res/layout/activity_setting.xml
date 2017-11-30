@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="bawei.com.gds_project.acticity.SettingActivity">
+   <TextView
+       android:layout_width="match_parent"
+       android:text="个人资料"
+       android:textSize="@dimen/dp14"
+       android:gravity="center"
+       android:layout_height="@dimen/dp50" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

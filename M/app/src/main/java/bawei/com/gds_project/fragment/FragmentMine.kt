@@ -1,16 +1,26 @@
 package bawei.com.gds_project.fragment
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AlertDialog
+import android.support.v7.app.AlertDialog.*
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import bawei.com.gds_project.R
 import bawei.com.gds_project.acticity.SettingActivity
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlinx.android.synthetic.main.fragment_mine.*
+import android.widget.Toast
+import bawei.com.gds_project.acticity.MainActivity
+import bawei.com.gds_project.R.mipmap.ic_launcher
+
+
 
 /**
  *  1.类的用途
@@ -20,7 +30,7 @@ import kotlinx.android.synthetic.main.fragment_mine.*
 class FragmentMine :Fragment() ,View.OnClickListener {
 
 
-    lateinit var mine_setting : TextView
+    lateinit var mine_setting : ImageView
     lateinit var mine_fresco : SimpleDraweeView
     lateinit var mine_cache : TextView
     lateinit var mine_look : TextView
@@ -32,7 +42,7 @@ class FragmentMine :Fragment() ,View.OnClickListener {
     }
 
     private fun initId(view: View) {
-        mine_setting = view.findViewById<TextView>(R.id.mine_setting)
+        mine_setting = view.findViewById<ImageView>(R.id.mine_setting)
         mine_fresco=view.findViewById<SimpleDraweeView>(R.id.mine_fresco)
         mine_cache=view.findViewById<TextView>(R.id.mine_cache)
         mine_look=view.findViewById<TextView>(R.id.mine_look)
@@ -48,9 +58,19 @@ class FragmentMine :Fragment() ,View.OnClickListener {
       when(p0?.id){
           R.id.mine_setting ->{
             var intent=Intent(activity,SettingActivity::class.java)
-
+              startActivity(intent)
           }
           R.id.mine_fresco ->{
+              //创建数据
+              val items = arrayOf("从相册选择图片", "打开相机")
+              var alertDialogBuilder = AlertDialog.Builder(activity)
+              alertDialogBuilder.setIcon(R.mipmap.icon_setting).setTitle("提示")
+                      .setItems(items, DialogInterface.OnClickListener {
+                          dialogInterface, i ->
+                          Log.i("zss",items[i])
+              })
+              alertDialogBuilder.create().show()
+
 
           }
           R.id.mine_look ->{

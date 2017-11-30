@@ -5,13 +5,19 @@
     android:background="@color/moccasin"
     android:orientation="vertical"
     android:layout_height="match_parent">
-        <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60">
+        <ImageView
             android:id="@+id/mine_setting"
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp10"
-            android:drawableRight="@mipmap/icon_setting"
-            android:layout_height="@dimen/dp40" />
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_setting"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/mine_fresco"
         android:layout_width="@dimen/dp60"
