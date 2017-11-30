@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,9 +38,7 @@ class FragmentIndex : Fragment(),IndexView {
         rv_index.layoutManager = LinearLayoutManager(activity)
         val indexAdapter = MyIndexAdapter(typeList, activity)
         rv_index.adapter = indexAdapter
-<<<<<<< HEAD
        // Log.i("sss","创建适配器成功")
-=======
         //点击监听
         indexAdapter?.setItemClick(object : MyIndexAdapter.OnItemClickListen{
             override fun onItemClick(position: Int) {
@@ -52,7 +49,6 @@ class FragmentIndex : Fragment(),IndexView {
             }
         })
 
->>>>>>> 9e72d99b231c4140906ee701e44c02c5bfd83621
     }
 
     var indexPresenter : IndexPresenterImpl ?= null

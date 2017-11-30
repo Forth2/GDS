@@ -40,20 +40,15 @@ dependencies {
 
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
-    testCompile 'junit:junit:4.12'
-<<<<<<< HEAD
-
-
 
 compile 'com.android.support:appcompat-v7:26.+'
 
     compile 'com.android.support:appcompat-v7:26.+'
 
-=======
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.gyf.barlibrary:barlibrary:2.2.9'
     compile 'com.android.support:appcompat-v7:26.+'
->>>>>>> 9e72d99b231c4140906ee701e44c02c5bfd83621
+
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.hjm:BottomTabBar:1.1.1'
     compile 'com.android.support:recyclerview-v7:26.+'
