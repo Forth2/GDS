@@ -33,11 +33,21 @@
         <activity android:name=".acticity.SettingActivity"></activity>
 
         <activity android:name=".acticity.ResultfindActivity"></activity>
+<<<<<<< HEAD
 
+=======
+>>>>>>> adc80cfbd2b453d964a53574a5fdba8f1a11cc5e
         <activity android:name=".acticity.SettingActivity" />
         <activity android:name=".acticity.ResultfindActivity" />
         <activity android:name=".acticity.VideoPlayerActivity"></activity>
 
+<<<<<<< HEAD
+=======
+        <activity android:name=".acticity.SettingActivity" />
+        <activity android:name=".acticity.ResultfindActivity" />
+        <activity android:name=".acticity.VideoPlayerActivity"></activity>
+
+>>>>>>> adc80cfbd2b453d964a53574a5fdba8f1a11cc5e
     </application>
 
 </manifest>
