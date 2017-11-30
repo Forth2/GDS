@@ -1,5 +1,7 @@
 package bawei.com.gds_project.bean
 
+import java.io.Serializable
+
 /**
  * Created by dell-pc on 2017/11/28.
  */
@@ -21,7 +23,7 @@ class HotBean {
 
 
 
-    class ItemListBean {
+    class ItemListBean : Serializable{
 
 
         var type: String? = null
@@ -29,7 +31,7 @@ class HotBean {
         var tag: Any? = null
         var id: Int = 0
 
-        class DataBean {
+        class DataBean :Serializable {
 
 
             var dataType: String? = null
@@ -72,7 +74,7 @@ class HotBean {
             var labelList: List<*>? = null
             var subtitles: List<*>? = null
 
-            class ProviderBean {
+            class ProviderBean : Serializable {
 
 
                 var name: String? = null
@@ -80,7 +82,7 @@ class HotBean {
                 var icon: String? = null
             }
 
-            class CoverBean {
+            class CoverBean : Serializable {
 
 
                 var feed: String? = null
@@ -90,7 +92,7 @@ class HotBean {
                 var homepage: String? = null
             }
 
-            class ConsumptionBean {
+            class ConsumptionBean : Serializable {
 
 
                 var collectionCount: Int = 0
@@ -98,7 +100,7 @@ class HotBean {
                 var replyCount: Int = 0
             }
 
-            class PlayInfoBean {
+            class PlayInfoBean : Serializable {
 
 
                 var height: Int = 0
@@ -108,7 +110,7 @@ class HotBean {
                 var url: String? = null
                 var urlList: List<UrlListBean>? = null
 
-                class UrlListBean {
+                class UrlListBean : Serializable {
 
 
                     var name: String? = null
@@ -117,7 +119,7 @@ class HotBean {
                 }
             }
 
-            class TagsBean {
+            class TagsBean : Serializable {
 
 
                 var id: Int = 0
