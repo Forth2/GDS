@@ -49,7 +49,7 @@ class ResultfindActivity : AppCompatActivity(),FindResultView {
                 var intent= Intent(this@ResultfindActivity,VideoPlayerActivity::class.java)
                 //传值
                 intent.putExtra("judge","find")
-                intent.putExtra("data",listBean)
+                intent.putExtra("data",listBean?.data)
                 //跳转
                 startActivity(intent)
             }
