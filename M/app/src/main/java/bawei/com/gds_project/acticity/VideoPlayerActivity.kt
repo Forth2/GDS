@@ -78,6 +78,7 @@ class VideoPlayerActivity : AppCompatActivity() {
         imageView.scaleType = ImageView.ScaleType.CENTER_CROP
         gsyVideo.fullscreenButton.setOnClickListener {
             //直接横屏
+            
             orientationUtils.resolveByClick()
             //第一个true是判断是否隐藏ActionBar  第二个true判断是否隐藏statusbar
             gsyVideo.startWindowFullscreen(this@VideoPlayerActivity, true, true)
