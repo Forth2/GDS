@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.activity_video_player.*
 class VideoPlayerActivity : AppCompatActivity() {
 
     var i : Intent ?= null
-    lateinit var imageView : ImageView
     lateinit var orientationUtils : OrientationUtils
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,30 +58,31 @@ class VideoPlayerActivity : AppCompatActivity() {
         gsyVideo.setThumbImageView(view)
         gsyVideo.setIsTouchWiget(true)
 
+//        CutVideo()
+
     }
 
     /**
      * 全屏切换
      */
     private fun CutVideo() {
+
+        //设置全屏布局的容器
+        orientationUtils = OrientationUtils(this, gsyVideo)
+        gsyVideo.setIsTouchWiget(true)
         //关闭自动旋转
         gsyVideo.isRotateViewAuto = false;
         gsyVideo.isLockLand = false;
         gsyVideo.isShowFullAnimation = false;
         gsyVideo.isNeedLockFull = true;
-        //设置全屏布局的容器
-        orientationUtils = OrientationUtils(this, gsyVideo)
-        gsyVideo.setIsTouchWiget(true)
-        //增加封面
-        imageView = ImageView(this)
-        imageView.scaleType = ImageView.ScaleType.CENTER_CROP
         gsyVideo.fullscreenButton.setOnClickListener {
             //直接横屏
-            
+
             orientationUtils.resolveByClick()
             //第一个true是判断是否隐藏ActionBar  第二个true判断是否隐藏statusbar
             gsyVideo.startWindowFullscreen(this@VideoPlayerActivity, true, true)
         }
+
     }
 
 }
