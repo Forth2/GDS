@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.hjm.bottomtabbar.BottomTabBar;
 import com.minifilm.R;
 import com.minifilm.activity.BaseActivity;
+import com.minifilm.gysfragment.FragmentMine;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
