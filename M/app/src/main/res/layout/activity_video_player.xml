@@ -6,14 +6,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="bawei.com.gds_project.acticity.VideoPlayerActivity">
+ <FrameLayout
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="3">
+     <com.shuyu.gsyvideoplayer.video.CustomGSYVideoPlayer
+         android:id="@+id/gsyVideo"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"></com.shuyu.gsyvideoplayer.video.CustomGSYVideoPlayer>
+ </FrameLayout>
 
-    <com.shuyu.gsyvideoplayer.video.CustomGSYVideoPlayer
-        android:id="@+id/gsyVideo"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"></com.shuyu.gsyvideoplayer.video.CustomGSYVideoPlayer>
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_bottom_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
 
+        </FrameLayout>
     <LinearLayout
-        android:background="@color/greenyellow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -49,5 +66,6 @@
             android:text="内容"/>
 
     </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>
